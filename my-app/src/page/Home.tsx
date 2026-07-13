@@ -1,4 +1,4 @@
-function Home() {
+export default function Home() {
     return (
         <div>
             <h1 className="text-2xl font-bold">Welcome to our website</h1>
@@ -6,4 +6,3 @@ function Home() {
         </div>
     )
 }
-export default Home;
