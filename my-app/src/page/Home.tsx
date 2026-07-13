@@ -13,7 +13,7 @@ export default function Home() {
           <p className="mt-4 text-base text-[#717171] md:text-lg">
             Where to grow your business as a photographer: site or social media?
           </p>
-          <Link to="/signup" className="mt-8 inline-flex rounded-md bg-[#4CAF4F] px-8 py-3.5 text-base font-medium text-white no-underline hover:bg-[#449e48]"
+          <Link to="/" className="mt-8 inline-flex rounded-md bg-[#4CAF4F] px-8 py-3.5 text-base font-medium text-white no-underline hover:bg-[#449e48]"
           >
             Register
           </Link>
