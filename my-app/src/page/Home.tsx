@@ -364,7 +364,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative bg-[#E8E8E8] px-6 py-10 sm:px-10 sm:py-12 lg:px-14 lg:py-16">
+          <div className="relative px-6 py-10 sm:px-10 sm:py-12 lg:px-14 lg:py-16">
             <h2 className="m-0 max-w-[420px] text-3xl font-bold leading-tight text-[#1A1A1A] md:text-4xl lg:text-[44px] lg:leading-[1.15]">
               Discover your <span className="text-[#2F80ED]">dream</span>
             </h2>

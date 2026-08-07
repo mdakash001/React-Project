@@ -52,10 +52,8 @@ function Post({ numOfPost = 3 }: PostProps) {
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
       <div className="mb-8 text-center">
-        <h2 className="text-4xl font-bold text-gray-800">Total Posts</h2>
-
-        <p className="mt-2 text-lg text-gray-600">
-          Total:{" "}
+        <p className="mt-2 text-lg text-white-600">
+          Posts:{" "}
           <span className="font-bold text-black-600">{posts.length}</span>
         </p>
       </div>
@@ -67,7 +65,7 @@ function Post({ numOfPost = 3 }: PostProps) {
             className="rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
           >
             <div className="mb-4 flex items-center justify-between">
-              <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-black-700">
+              <span className="rounded-full px-3 py-1 text-sm font-semibold text-black-700">
                 Post #{post.id}
               </span>
             </div>
