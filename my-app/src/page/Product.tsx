@@ -10,7 +10,7 @@ type PostProps = {
   numOfPost?: number;
 };
 
-function Post({ numOfPost = 6 }: PostProps) {
+function Post({ numOfPost = 3 }: PostProps) {
   const [posts, setPosts] = useState<PostItem[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -46,7 +46,7 @@ function Post({ numOfPost = 6 }: PostProps) {
   }, [numOfPost]);
 
   if (loading) {
-    return <h1>Posts is loading, Please wait....</h1>;
+    return <h1>Posts is loading....</h1>;
   }
 
   return (
@@ -56,7 +56,7 @@ function Post({ numOfPost = 6 }: PostProps) {
 
         <p className="mt-2 text-lg text-gray-600">
           Total:{" "}
-          <span className="font-bold text-blue-600">{posts.length}</span>
+          <span className="font-bold text-black-600">{posts.length}</span>
         </p>
       </div>
 
@@ -67,7 +67,7 @@ function Post({ numOfPost = 6 }: PostProps) {
             className="rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
           >
             <div className="mb-4 flex items-center justify-between">
-              <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-700">
+              <span className="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-black-700">
                 Post #{post.id}
               </span>
             </div>

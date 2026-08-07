@@ -8,6 +8,10 @@ import rect86 from "../assets/Rectangle 86.png";
 import rect87 from "../assets/Rectangle 87.png";
 import rect88 from "../assets/Rectangle 88.png";
 import rect89 from "../assets/Rectangle 89.png";
+import recentOne from "../assets/one.png";
+import recentTwo from "../assets/two.png";
+import recentThree from "../assets/three.png";
+import aboutImage from "../assets/four.png";
 
 const featuredProperties = Array.from({ length: 8 }, (_, index) => ({
   id: index + 1,
@@ -21,6 +25,42 @@ const featuredProperties = Array.from({ length: 8 }, (_, index) => ({
   agent: "Susana Paul",
   image: rect14,
 }));
+
+const recentProperties = [
+  {
+    id: 1,
+    category: "Business",
+    title: "Living in a luxury area is not a dream anymore now",
+    image: recentOne,
+  },
+  {
+    id: 2,
+    category: "Business",
+    title: "Living in a luxury area is not a dream anymore now",
+    image: recentTwo,
+  },
+  {
+    id: 3,
+    category: "Business",
+    title: "Living in a luxury area is not a dream anymore now",
+    image: recentThree,
+  },
+] as const;
+
+const aboutStats = [
+  {
+    value: "100+",
+    label: "Committed to achieving full client satisfaction to exceed your expectations",
+  },
+  {
+    value: "85",
+    label: "Committed to achieving full client satisfaction to exceed your expectations",
+  },
+  {
+    value: "9",
+    label: "Committed to achieving full client satisfaction to exceed your expectations",
+  },
+] as const;
 
 const features = [
   {
@@ -305,6 +345,96 @@ export default function Home() {
                       {property.area}
                     </span>
                   </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-white py-16 md:py-24">
+        <div className="mx-auto grid w-full max-w-[1200px] grid-cols-1 items-center gap-10 px-4 lg:grid-cols-2 lg:gap-0">
+          <div className="relative mx-auto flex w-full max-w-[480px] items-center justify-center lg:mx-0">
+            <div className="relative aspect-square w-full max-w-[420px] overflow-hidden">
+              <img
+                src={aboutImage}
+                alt="Modern city skyline"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="relative bg-[#E8E8E8] px-6 py-10 sm:px-10 sm:py-12 lg:px-14 lg:py-16">
+            <h2 className="m-0 max-w-[420px] text-3xl font-bold leading-tight text-[#1A1A1A] md:text-4xl lg:text-[44px] lg:leading-[1.15]">
+              Discover your <span className="text-[#2F80ED]">dream</span>
+            </h2>
+
+            <p className="mt-5 m-0 max-w-[480px] text-sm leading-6 text-[#6B7280] md:text-base md:leading-7">
+              Welcome to my house, your trusted partner in finding your home. Whether
+              you&apos;re buying, selling, or renting, our dedicated team...
+            </p>
+
+            <div className="mt-8 flex flex-col">
+              {aboutStats.map((stat) => (
+                <div
+                  key={stat.value}
+                  className="flex items-start gap-6 border-b border-[#D1D5DB] py-5 last:border-b-0 last:pb-0 first:pt-0"
+                >
+                  <span className="w-20 shrink-0 text-3xl font-bold text-[#374151] md:w-24 md:text-4xl">
+                    {stat.value}
+                  </span>
+                  <p className="m-0 pt-1 text-sm leading-5 text-[#6B7280] md:pt-2 md:text-[15px] md:leading-6">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-white py-16 md:py-24">
+        <div className="mx-auto w-full max-w-[1200px] px-4">
+          <h2 className="m-0 text-center text-2xl font-semibold text-[#1A1A1A] md:text-3xl">
+            Recent properties
+          </h2>
+
+          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+            {recentProperties.map((property) => (
+              <article
+                key={property.id}
+                className="group overflow-hidden rounded-[24px] bg-white shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1"
+              >
+                <div className="aspect-[16/10] overflow-hidden">
+                  <img
+                    src={property.image}
+                    alt={property.title}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="px-6 py-5 md:px-7 md:py-6">
+                  <span className="text-sm font-medium text-[#5B9DEF]">
+                    {property.category}
+                  </span>
+                  <h3 className="mt-2 m-0 text-lg font-bold leading-snug text-[#1A1A1A] md:text-xl md:leading-snug">
+                    {property.title}
+                  </h3>
+                  <a
+                    href="#"
+                    className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-[#6B7280] no-underline transition-colors hover:text-[#2F80ED]"
+                  >
+                    Read more
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path
+                        d="M7 17L17 7M17 7H9M17 7V15"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </a>
                 </div>
               </article>
             ))}
