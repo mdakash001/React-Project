@@ -88,21 +88,6 @@ export default function Sidebar() {
         ))}
       </nav>
 
-      <div className="mt-6 rounded-[20px] bg-linear-to-br from-[#5B5CE2] to-[#7C6CFF] px-5 py-6 text-center text-white">
-        <span className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-[10px] bg-white/20">
-          <LogoMark className="h-5 w-5" />
-        </span>
-        <p className="text-[16px] font-bold">Dabang Pro</p>
-        <p className="mt-1 text-[12px] leading-relaxed text-white/80">
-          Get access to all features on tetumbas
-        </p>
-        <button
-          type="button"
-          className="mt-4 w-full rounded-xl bg-white py-2.5 text-[14px] font-semibold text-[#5B5CE2]"
-        >
-          Get Pro
-        </button>
-      </div>
     </aside>
   );
 }
