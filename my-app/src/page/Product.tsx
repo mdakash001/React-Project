@@ -32,7 +32,7 @@ function Post({ numOfPost = 3 }: PostProps) {
         setPosts(data);
         timer = setTimeout(() => {
           if (!cancelled) setLoading(false);
-        }, 2000);
+        }, 500);
       })
       .catch((error) => {
         console.error("Error fetching posts", error);
@@ -46,41 +46,27 @@ function Post({ numOfPost = 3 }: PostProps) {
   }, [numOfPost]);
 
   if (loading) {
-    return <h1>Posts is loading....</h1>;
+    return <h2 className="text-center text-white">Loading....</h2>;
   }
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
       <div className="mb-8 text-center">
-        <p className="mt-2 text-lg text-white-600">
+        <p className="mt-2 text-lg text-white">
           Posts:{" "}
-          <span className="font-bold text-black-600">{posts.length}</span>
+          <span className="font-bold text-white">{posts.length}</span>
         </p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
-          <div
-            key={post.id}
-            className="rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
-          >
-            <div className="mb-4 flex items-center justify-between">
-              <span className="rounded-full px-3 py-1 text-sm font-semibold text-black-700">
-                Post #{post.id}
-              </span>
-            </div>
-
-            <h2 className="mb-3 line-clamp-2 text-xl font-bold text-gray-800">
+          <div key={post.id} className=" bg-white p-6" >
+            <h2 className="mb-3 text-xl font-bold text-gray-800">
               {post.title}
             </h2>
-
-            <p className="mb-5 line-clamp-4 text-gray-600">{post.body}</p>
-
-            <button
-              type="button"
-              className="rounded-lg bg-black-600 px-4 py-2 text-white transition hover:bg-black-700"
-            >
-              Read More →
+            <p className="mb-5 text-black">{post.body}</p>
+            <button type="button" className=" text-black mt-2" >
+              Read More
             </button>
           </div>
         ))}
