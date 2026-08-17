@@ -1,5 +1,6 @@
 import BarChart from "../components/barchart";
 import Header from "../components/header";
+import LineChart from "../components/linechart";
 import Sales from "../components/Sales";
 import Sidebar from "../components/sidebar";
 
@@ -15,6 +16,7 @@ export default function Home() {
               <Sales />
             </div>
             <BarChart />
+            <LineChart />
           </div>
         </main>
       </div>
