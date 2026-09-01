@@ -87,6 +87,10 @@ export default function Header() {
 
       <div className="border-b border-black/5 bg-white shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
         <div className="mx-auto flex h-[88px] max-w-[1320px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-10">
+          
+            <span className="text-[28px] font-extrabold tracking-tight text-[#0b1d36]">
+              Politin
+            </span>
          
 
           <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
